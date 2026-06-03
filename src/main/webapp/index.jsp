@@ -15,14 +15,14 @@
                 <h1>Una experiencia visual de restaurante, lista para vender, atender y administrar.</h1>
             </div>
             <div class="nav-actions">
-                <a class="chip" href="${pageContext.request.contextPath}/mesero">Abrir mesero</a>
+                <a class="chip" href="${pageContext.request.contextPath}/cliente">Cliente</a>
                 <a class="chip chip-primary" href="${pageContext.request.contextPath}/login">Iniciar sesión</a>
             </div>
         </div>
 
         <div class="container hero-grid">
             <section class="hero-copy">
-                <p class="lead">Explora categorías de comida, descubre platos destacados y entra al panel de administración para gestionar ventas, inventario y equipo.</p>
+                <p class="lead">Descubre el menú del restaurante, prueba la experiencia de cliente y entra al acceso por roles para administrar cocina, meseros, entregas y ventas.</p>
                 <div class="category-pills">
                     <span>🍤 Mariscos</span>
                     <span>🍝 Pastas</span>
@@ -39,8 +39,8 @@
                 </nav>
             </section>
             <aside class="login-card">
-                <h2>Platos del día</h2>
-                <p>Un diseño pensado para que se vea profesional, apetitoso y fácil de mostrar en clase o en una demo.</p>
+                <h2>Experiencia cliente</h2>
+                <p>La vista principal ahora destaca la experiencia del cliente: menú visual, pedidos y reseñas con un diseño más apetitoso.</p>
                 <ul>
                     <li>Menú visual con categorías</li>
                     <li>Panel de administración</li>
