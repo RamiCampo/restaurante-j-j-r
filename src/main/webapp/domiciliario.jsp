@@ -27,9 +27,9 @@
     <article class="feature-card feature-emerald"><h3>Entregados</h3><p class="monto">11</p><small>Total hoy</small></article>
   </section>
   <section class="tarjetas">
-    <article class="tarjeta tarjeta-rose"><h3>Pedido #201</h3><p>Dirección: Av. Central 123 · Lomo Saltado · 09:15</p><a class="boton boton-principal" href="#">Aceptar</a></article>
-    <article class="tarjeta tarjeta-gold"><h3>Pedido #202</h3><p>Dirección: Calle Norte 45 · Ceviche · 09:20</p><a class="boton" href="#">Aceptar</a></article>
-    <article class="tarjeta tarjeta-emerald"><h3>Pedido #203</h3><p>Dirección: Plaza 7 · Arroz con Pollo · 09:25</p><a class="boton" href="#">Aceptar</a></article>
+    <article class="tarjeta tarjeta-rose"><h3>Pedido #201</h3><p>Dirección: Av. Central 123 · Lomo Saltado · 09:15</p><a class="boton boton-principal" href="${pageContext.request.contextPath}/domiciliario">Aceptar</a></article>
+    <article class="tarjeta tarjeta-gold"><h3>Pedido #202</h3><p>Dirección: Calle Norte 45 · Ceviche · 09:20</p><a class="boton" href="${pageContext.request.contextPath}/domiciliario">Aceptar</a></article>
+    <article class="tarjeta tarjeta-emerald"><h3>Pedido #203</h3><p>Dirección: Plaza 7 · Arroz con Pollo · 09:25</p><a class="boton" href="${pageContext.request.contextPath}/domiciliario">Aceptar</a></article>
   </section>
 </main>
 </body>

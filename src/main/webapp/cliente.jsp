@@ -35,25 +35,25 @@
                 <h3>🍛 Arroz con Pollo</h3>
                 <p>Clásico, sabroso y muy solicitado.</p>
                 <strong>$12.50</strong>
-                <a class="boton boton-principal" href="#">Agregar al pedido</a>
+                <a class="boton boton-principal" href="${pageContext.request.contextPath}/cliente">Agregar al pedido</a>
             </article>
             <article class="feature-card feature-gold">
                 <h3>🥩 Lomo Saltado</h3>
                 <p>Un plato completo con sabor irresistible.</p>
                 <strong>$15.00</strong>
-                <a class="boton" href="#">Agregar al pedido</a>
+                <a class="boton" href="${pageContext.request.contextPath}/cliente">Agregar al pedido</a>
             </article>
             <article class="feature-card feature-emerald">
                 <h3>🍤 Ceviche</h3>
                 <p>Fresco, ligero y muy popular.</p>
                 <strong>$13.50</strong>
-                <a class="boton" href="#">Agregar al pedido</a>
+                <a class="boton" href="${pageContext.request.contextPath}/cliente">Agregar al pedido</a>
             </article>
             <article class="feature-card feature-sky">
                 <h3>🍰 Torta de Chocolate</h3>
                 <p>Postre perfecto para cerrar tu comida.</p>
                 <strong>$6.50</strong>
-                <a class="boton" href="#">Agregar al pedido</a>
+                <a class="boton" href="${pageContext.request.contextPath}/cliente">Agregar al pedido</a>
             </article>
         </section>
 

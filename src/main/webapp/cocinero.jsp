@@ -27,9 +27,9 @@
     <article class="feature-card feature-emerald"><h3>Órdenes listas</h3><p class="monto">12</p><small>Preparadas hoy</small></article>
   </section>
   <section class="tarjetas">
-    <article class="tarjeta tarjeta-rose"><h3>Pedido #104</h3><p>Mesa 2 · Lomo Saltado · 2 x Ceviche · 08:45</p><a class="boton boton-principal" href="#">Marcar listo</a></article>
-    <article class="tarjeta tarjeta-gold"><h3>Pedido #105</h3><p>Mesa 4 · Arroz con Pollo · 1 x Jugo · 08:52</p><a class="boton" href="#">Marcar listo</a></article>
-    <article class="tarjeta tarjeta-emerald"><h3>Pedido #106</h3><p>Mesa 1 · Torta de Chocolate · 08:58</p><a class="boton" href="#">Marcar listo</a></article>
+    <article class="tarjeta tarjeta-rose"><h3>Pedido #104</h3><p>Mesa 2 · Lomo Saltado · 2 x Ceviche · 08:45</p><a class="boton boton-principal" href="${pageContext.request.contextPath}/cocinero">Marcar listo</a></article>
+    <article class="tarjeta tarjeta-gold"><h3>Pedido #105</h3><p>Mesa 4 · Arroz con Pollo · 1 x Jugo · 08:52</p><a class="boton" href="${pageContext.request.contextPath}/cocinero">Marcar listo</a></article>
+    <article class="tarjeta tarjeta-emerald"><h3>Pedido #106</h3><p>Mesa 1 · Torta de Chocolate · 08:58</p><a class="boton" href="${pageContext.request.contextPath}/cocinero">Marcar listo</a></article>
   </section>
 </main>
 </body>

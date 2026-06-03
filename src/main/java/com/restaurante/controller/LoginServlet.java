@@ -53,6 +53,8 @@ public class LoginServlet extends HttpServlet {
                         response.sendRedirect(request.getContextPath() + "/mesero-panel");
                     } else if ("domiciliario".equalsIgnoreCase(rol)) {
                         response.sendRedirect(request.getContextPath() + "/domiciliario");
+                    } else if ("cajero".equalsIgnoreCase(rol)) {
+                        response.sendRedirect(request.getContextPath() + "/cajero");
                     } else {
                         response.sendRedirect(request.getContextPath() + "/cliente");
                     }

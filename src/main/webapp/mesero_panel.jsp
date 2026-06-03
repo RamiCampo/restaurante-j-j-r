@@ -27,9 +27,9 @@
     <article class="feature-card feature-emerald"><h3>Clientes satisfechos</h3><p class="monto">18</p><small>Calificación alta</small></article>
   </section>
   <section class="tarjetas">
-    <article class="tarjeta tarjeta-rose"><h3>Mesa 1</h3><p>Pedido #104 · Ceviche · 1 bebida · 08:45</p><a class="boton boton-principal" href="#">Confirmar entrega</a></article>
-    <article class="tarjeta tarjeta-gold"><h3>Mesa 3</h3><p>Pedido #105 · Lomo Saltado · 08:52</p><a class="boton" href="#">Confirmar entrega</a></article>
-    <article class="tarjeta tarjeta-emerald"><h3>Mesa 4</h3><p>Pedido #106 · Arroz con Pollo · 08:58</p><a class="boton" href="#">Confirmar entrega</a></article>
+    <article class="tarjeta tarjeta-rose"><h3>Mesa 1</h3><p>Pedido #104 · Ceviche · 1 bebida · 08:45</p><a class="boton boton-principal" href="${pageContext.request.contextPath}/mesero-panel">Confirmar entrega</a></article>
+    <article class="tarjeta tarjeta-gold"><h3>Mesa 3</h3><p>Pedido #105 · Lomo Saltado · 08:52</p><a class="boton" href="${pageContext.request.contextPath}/mesero-panel">Confirmar entrega</a></article>
+    <article class="tarjeta tarjeta-emerald"><h3>Mesa 4</h3><p>Pedido #106 · Arroz con Pollo · 08:58</p><a class="boton" href="${pageContext.request.contextPath}/mesero-panel">Confirmar entrega</a></article>
   </section>
 </main>
 </body>
