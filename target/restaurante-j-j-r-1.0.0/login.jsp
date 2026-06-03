@@ -22,12 +22,18 @@
     </header>
 
     <main class="container panel">
+        <% if (request.getAttribute("mensajeError") != null) { %>
+            <div class="alert error"><%= request.getAttribute("mensajeError") %></div>
+        <% } %>
+        <% if (request.getAttribute("mensajeExito") != null) { %>
+            <div class="alert success"><%= request.getAttribute("mensajeExito") %></div>
+        <% } %>
         <section class="section-heading">
             <div>
                 <p class="eyebrow eyebrow-dark">Roles</p>
                 <h2>Inicia sesión según tu función</h2>
             </div>
-            <p class="muted">Esta versión visual presenta la experiencia completa del restaurante: administración, cocina, meseros y entregas.</p>
+            <p class="muted">Esta versión visual presenta la experiencia completa del restaurante: administración, cocina, meseros, cajeros y entregas.</p>
         </section>
 
         <section class="feature-grid">
@@ -42,18 +48,27 @@
             </article>
             <article class="feature-card feature-gold">
                 <h3>🧑‍🍳 Cocina</h3>
+                <p>Acceso para cocineros: crea un usuario con rol <strong>cocinero</strong> desde el panel admin.</p>
                 <p>Ve pedidos pendientes, prioriza por hora y marca órdenes como listas.</p>
-                <a class="boton" href="${pageContext.request.contextPath}/cocina">Entrar</a>
+                <a class="boton" href="${pageContext.request.contextPath}/cocinero">Entrar</a>
             </article>
             <article class="feature-card feature-emerald">
                 <h3>🧑‍🍽️ Mesero</h3>
+                <p>Acceso para meseros: crea un usuario con rol <strong>mesero</strong> desde el panel admin.</p>
                 <p>Consulta mesas, confirma pedidos y atiende al cliente con una vista clara.</p>
-                <a class="boton" href="${pageContext.request.contextPath}/mesero">Entrar</a>
+                <a class="boton" href="${pageContext.request.contextPath}/mesero-panel">Entrar</a>
             </article>
             <article class="feature-card feature-sky">
+                <h3>💵 Cajero</h3>
+                <p>Acceso para cajeros: crea un usuario con rol <strong>cajero</strong> desde el panel admin.</p>
+                <p>Revisa pedidos, registra pagos y marca despachos o revisiones.</p>
+                <a class="boton" href="${pageContext.request.contextPath}/cajero">Entrar</a>
+            </article>
+            <article class="feature-card feature-rose">
                 <h3>🚚 Domiciliario</h3>
+                <p>Acceso para repartidores: crea un usuario con rol <strong>domiciliario</strong> desde el panel admin.</p>
                 <p>Revisa entregas disponibles, acepta y finaliza pedidos en ruta.</p>
-                <a class="boton" href="${pageContext.request.contextPath}/administracion">Entrar</a>
+                <a class="boton" href="${pageContext.request.contextPath}/domiciliario">Entrar</a>
             </article>
         </section>
     </main>

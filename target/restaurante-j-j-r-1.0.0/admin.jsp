@@ -48,6 +48,7 @@
                         <option value="mesero">Mesero</option>
                         <option value="cocinero">Cocinero</option>
                         <option value="domiciliario">Domiciliario</option>
+                        <option value="cajero">Cajero</option>
                         <option value="cliente">Cliente</option>
                     </select>
                     <button class="boton boton-principal" type="submit">Guardar usuario</button>
