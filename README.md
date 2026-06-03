@@ -33,17 +33,24 @@ sql/
 
 ## Despliegue en Railway
 
-Este proyecto ya incluye un Dockerfile para desplegarlo en Railway.
+Este proyecto ya incluye un Dockerfile que compila el WAR dentro del contenedor, así que Railway no necesita un WAR previo en el repositorio.
 
-Pasos:
-1. Sube el repositorio a GitHub.
-2. Crea un servicio en Railway y elige "Deploy from GitHub".
-3. Añade una base de datos MySQL en Railway.
-4. En Variables, configura:
-   - DB_URL = jdbc:mysql://<host>:3306/restaurante_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-   - DB_USER = <usuario_mysql>
-   - DB_PASSWORD = <contraseña_mysql>
-5. Railway construirá el contenedor con el Dockerfile y expondrá la app en el puerto 8080.
+Pasos exactos:
+1. Sube este repositorio a GitHub.
+2. En Railway crea un nuevo proyecto y selecciona "Deploy from GitHub".
+3. Añade un servicio de MySQL desde la pestaña de plugins/add-ons de Railway.
+4. Abre la app que acabas de desplegar y ve a Variables.
+5. Copia los valores del servicio MySQL (host, puerto, usuario, contraseña y nombre de la base de datos) y configura:
+   - DB_URL = jdbc:mysql://<HOST>:3306/<DATABASE>?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+   - DB_USER = <USER>
+   - DB_PASSWORD = <PASSWORD>
+6. Deja el puerto en 8080 (el Dockerfile ya lo expone).
+7. Haz Deploy. Railway generará automáticamente una URL pública para tu app.
+
+Importante:
+- Usa el host que te da Railway para la base de datos, no localhost.
+- Si usas la base de datos del mismo proyecto en Railway, el host suele aparecer automáticamente en la configuración del add-on.
+- La URL pública aparecerá en la pestaña de Deploy/Settings una vez finalizada la construcción.
 
 ## Objetivo educativo
 
