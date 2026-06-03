@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo Administración</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/estilos.css">
 </head>
 <body>
     <header class="hero small">
@@ -15,9 +15,9 @@
             <h1>Módulo de Administración</h1>
             <p>Vista simple para el historial de ventas y ganancias acumuladas.</p>
             <nav class="menu-principal">
-                <a href="index.jsp">Inicio</a>
-                <a href="mesero">Mesero</a>
-                <a href="cocina">Cocina</a>
+                <a href="${pageContext.request.contextPath}/">Inicio</a>
+                <a href="${pageContext.request.contextPath}/mesero">Mesero</a>
+                <a href="${pageContext.request.contextPath}/cocina">Cocina</a>
             </nav>
         </div>
     </header>

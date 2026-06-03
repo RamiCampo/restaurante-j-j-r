@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo Mesero</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/estilos.css">
 </head>
 <body>
     <header class="hero small">
@@ -15,9 +15,9 @@
             <h1>Módulo de Pedidos</h1>
             <p>El mesero registra la orden y la envía a cocina.</p>
             <nav class="menu-principal">
-                <a href="index.jsp">Inicio</a>
-                <a href="cocina">Cocina</a>
-                <a href="administracion">Administración</a>
+                <a href="${pageContext.request.contextPath}/">Inicio</a>
+                <a href="${pageContext.request.contextPath}/cocina">Cocina</a>
+                <a href="${pageContext.request.contextPath}/administracion">Administración</a>
             </nav>
         </div>
     </header>
@@ -32,7 +32,7 @@
                 <p class="alert error"><%= request.getAttribute("mensajeError") %></p>
             <% } %>
 
-            <form action="mesero" method="post" class="form-grid">
+            <form action="${pageContext.request.contextPath}/mesero" method="post" class="form-grid">
                 <label>
                     Número de mesa:
                     <select name="numeroMesa" required>
