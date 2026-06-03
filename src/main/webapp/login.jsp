@@ -42,16 +42,19 @@
             </article>
             <article class="feature-card feature-gold">
                 <h3>🧑‍🍳 Cocina</h3>
+                <p>Acceso para cocineros: crea un usuario con rol <strong>cocinero</strong> desde el panel admin.</p>
                 <p>Ve pedidos pendientes, prioriza por hora y marca órdenes como listas.</p>
                 <a class="boton" href="${pageContext.request.contextPath}/cocina">Entrar</a>
             </article>
             <article class="feature-card feature-emerald">
                 <h3>🧑‍🍽️ Mesero</h3>
+                <p>Acceso para meseros: crea un usuario con rol <strong>mesero</strong> desde el panel admin.</p>
                 <p>Consulta mesas, confirma pedidos y atiende al cliente con una vista clara.</p>
                 <a class="boton" href="${pageContext.request.contextPath}/mesero">Entrar</a>
             </article>
             <article class="feature-card feature-sky">
                 <h3>🚚 Domiciliario</h3>
+                <p>Acceso para repartidores: crea un usuario con rol <strong>domiciliario</strong> desde el panel admin.</p>
                 <p>Revisa entregas disponibles, acepta y finaliza pedidos en ruta.</p>
                 <a class="boton" href="${pageContext.request.contextPath}/administracion">Entrar</a>
             </article>

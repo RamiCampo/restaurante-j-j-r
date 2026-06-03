@@ -44,8 +44,15 @@ public class LoginServlet extends HttpServlet {
                     session.setAttribute("email", rs.getString("email"));
                     session.setAttribute("rol", rs.getString("rol"));
 
-                    if ("admin".equalsIgnoreCase(rs.getString("rol"))) {
+                    String rol = rs.getString("rol");
+                    if ("admin".equalsIgnoreCase(rol)) {
                         response.sendRedirect(request.getContextPath() + "/admin");
+                    } else if ("cocinero".equalsIgnoreCase(rol)) {
+                        response.sendRedirect(request.getContextPath() + "/cocinero");
+                    } else if ("mesero".equalsIgnoreCase(rol)) {
+                        response.sendRedirect(request.getContextPath() + "/mesero-panel");
+                    } else if ("domiciliario".equalsIgnoreCase(rol)) {
+                        response.sendRedirect(request.getContextPath() + "/domiciliario");
                     } else {
                         response.sendRedirect(request.getContextPath() + "/cliente");
                     }
