@@ -4,63 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodly Restaurant System</title>
+    <title>RESTAURANTE J_J_R</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/estilos.css">
 </head>
 <body class="home-page">
     <header class="hero hero-home">
         <div class="container nav-bar">
             <div>
-                <p class="eyebrow">Foodly • Proyecto universitario</p>
-                <h1>Gestiona tu restaurante con una interfaz moderna y clara.</h1>
+                <p class="eyebrow">RESTAURANTE J_J_R • Diseño gastronómico moderno</p>
+                <h1>Una experiencia visual de restaurante, lista para vender, atender y administrar.</h1>
             </div>
             <div class="nav-actions">
-                <a class="chip" href="${pageContext.request.contextPath}/mesero">Ver mesero</a>
-                <a class="chip chip-primary" href="${pageContext.request.contextPath}/cocina">Iniciar sesión</a>
+                <a class="chip" href="${pageContext.request.contextPath}/mesero">Abrir mesero</a>
+                <a class="chip chip-primary" href="${pageContext.request.contextPath}/login">Iniciar sesión</a>
             </div>
         </div>
 
         <div class="container hero-grid">
             <section class="hero-copy">
-                <p class="lead">Un sistema web MVC con Java, JSP, Servlets y MySQL, pensado para presentar un proyecto universitario con una experiencia visual profesional.</p>
+                <p class="lead">Explora categorías de comida, descubre platos destacados y entra al panel de administración para gestionar ventas, inventario y equipo.</p>
+                <div class="category-pills">
+                    <span>🍤 Mariscos</span>
+                    <span>🍝 Pastas</span>
+                    <span>🥗 Saludables</span>
+                    <span>🍰 Postres</span>
+                    <span>🥤 Bebidas</span>
+                </div>
                 <nav class="menu-principal">
-                    <a href="${pageContext.request.contextPath}/mesero">Módulo Mesero</a>
-                    <a href="${pageContext.request.contextPath}/cocina">Módulo Cocina</a>
-                    <a href="${pageContext.request.contextPath}/administracion">Módulo Administración</a>
+                    <a href="${pageContext.request.contextPath}/cliente">Cliente</a>
+                    <a href="${pageContext.request.contextPath}/mesero">Mesero</a>
+                    <a href="${pageContext.request.contextPath}/cocina">Cocina</a>
+                    <a href="${pageContext.request.contextPath}/administracion">Admin</a>
+                    <a href="${pageContext.request.contextPath}/login">Acceso</a>
                 </nav>
             </section>
             <aside class="login-card">
-                <h2>Acceso rápido</h2>
-                <p>Panel principal para mostrar el sistema al jurado o al profesor.</p>
+                <h2>Platos del día</h2>
+                <p>Un diseño pensado para que se vea profesional, apetitoso y fácil de mostrar en clase o en una demo.</p>
                 <ul>
-                    <li>Pedidos en tiempo real</li>
-                    <li>Control de cocina</li>
-                    <li>Ganancias y ventas</li>
+                    <li>Menú visual con categorías</li>
+                    <li>Panel de administración</li>
+                    <li>Gestión de cocina, meseros y domicilios</li>
                 </ul>
-                <a class="boton boton-principal" href="${pageContext.request.contextPath}/mesero">Comenzar</a>
+                <a class="boton boton-principal" href="${pageContext.request.contextPath}/login">Entrar al sistema</a>
             </aside>
         </div>
     </header>
 
-    <main class="container tarjetas">
-        <article class="tarjeta tarjeta-rose">
-            <span class="badge">Mesero</span>
-            <h2>Tomar pedidos</h2>
-            <p>Selecciona mesa, agrega productos y envía la orden directamente a cocina.</p>
-            <a class="boton" href="${pageContext.request.contextPath}/mesero">Ingresar</a>
-        </article>
-        <article class="tarjeta tarjeta-gold">
-            <span class="badge">Cocina</span>
-            <h2>Preparar órdenes</h2>
-            <p>Revisa los pedidos pendientes y marca cada uno como listo al terminar.</p>
-            <a class="boton" href="${pageContext.request.contextPath}/cocina">Ingresar</a>
-        </article>
-        <article class="tarjeta tarjeta-emerald">
-            <span class="badge">Administración</span>
-            <h2>Control de ventas</h2>
-            <p>Consulta el historial de pedidos y visualiza el total acumulado de ganancias.</p>
-            <a class="boton" href="${pageContext.request.contextPath}/administracion">Ingresar</a>
-        </article>
+    <main class="container">
+        <section class="section-heading">
+            <div>
+                <p class="eyebrow eyebrow-dark">Categorías</p>
+                <h2>Explora el menú por tipo de comida</h2>
+            </div>
+            <p class="muted">Cada categoría se presenta con un estilo visual diferente para que la experiencia se sienta más real y atractiva.</p>
+        </section>
+
+        <section class="feature-grid">
+            <article class="feature-card feature-rose">
+                <span>🍽️</span>
+                <h3>Platos fuertes</h3>
+                <p>Arroz con pollo, lomo saltado y opciones de cocina tradicional.</p>
+            </article>
+            <article class="feature-card feature-gold">
+                <span>🦐</span>
+                <h3>Mariscos</h3>
+                <p>Ceviches, entradas y sabores frescos para una carta más atractiva.</p>
+            </article>
+            <article class="feature-card feature-emerald">
+                <span>🥤</span>
+                <h3>Bebidas</h3>
+                <p>Jugo, refrescos y opciones rápidas para acompañar cualquier pedido.</p>
+            </article>
+            <article class="feature-card feature-sky">
+                <span>🍰</span>
+                <h3>Postres</h3>
+                <p>Opciones dulces con presentación moderna para cerrar la experiencia.</p>
+            </article>
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <p class="eyebrow eyebrow-dark">Módulos</p>
+                <h2>Todo el sistema en una sola vista</h2>
+            </div>
+        </section>
+
+        <section class="tarjetas">
+            <article class="tarjeta tarjeta-rose">
+                <span class="badge">Mesero</span>
+                <h2>Tomar pedidos</h2>
+                <p>Selecciona mesa, agrega productos y envía la orden directamente a cocina.</p>
+                <a class="boton" href="${pageContext.request.contextPath}/mesero">Ingresar</a>
+            </article>
+            <article class="tarjeta tarjeta-gold">
+                <span class="badge">Cocina</span>
+                <h2>Preparar órdenes</h2>
+                <p>Revisa los pedidos pendientes y marca cada uno como listo al terminar.</p>
+                <a class="boton" href="${pageContext.request.contextPath}/cocina">Ingresar</a>
+            </article>
+            <article class="tarjeta tarjeta-emerald">
+                <span class="badge">Administración</span>
+                <h2>Control de ventas</h2>
+                <p>Consulta el historial de pedidos y visualiza el total acumulado de ganancias.</p>
+                <a class="boton" href="${pageContext.request.contextPath}/administracion">Ingresar</a>
+            </article>
+        </section>
     </main>
 </body>
 </html>

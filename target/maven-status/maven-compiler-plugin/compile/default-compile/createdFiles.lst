@@ -1,6 +1,10 @@
 com/restaurante/controller/MeseroServlet.class
+com/restaurante/controller/AdminServlet.class
+com/restaurante/controller/LoginServlet.class
+com/restaurante/model/Producto.class
+com/restaurante/controller/ClienteServlet.class
 com/restaurante/model/Pedido.class
 com/restaurante/util/ConexionDB.class
-com/restaurante/model/Producto.class
 com/restaurante/controller/CocinaServlet.class
+com/restaurante/model/Usuario.class
 com/restaurante/controller/AdministracionServlet.class

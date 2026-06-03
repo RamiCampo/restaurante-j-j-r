@@ -38,6 +38,7 @@ public class ConexionDB {
             stmt.execute("CREATE TABLE IF NOT EXISTS productos (id_producto INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, precio REAL NOT NULL, categoria TEXT NOT NULL)");
             stmt.execute("CREATE TABLE IF NOT EXISTS pedidos (id_pedido INTEGER PRIMARY KEY AUTOINCREMENT, id_mesa INTEGER NOT NULL, fecha TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, total REAL NOT NULL DEFAULT 0.0, estado TEXT NOT NULL DEFAULT 'Pendiente', FOREIGN KEY(id_mesa) REFERENCES mesas(id_mesa))");
             stmt.execute("CREATE TABLE IF NOT EXISTS detalles_pedido (id_detalle INTEGER PRIMARY KEY AUTOINCREMENT, id_pedido INTEGER NOT NULL, id_producto INTEGER NOT NULL, cantidad INTEGER NOT NULL DEFAULT 1, subtotal REAL NOT NULL DEFAULT 0.0, FOREIGN KEY(id_pedido) REFERENCES pedidos(id_pedido) ON DELETE CASCADE, FOREIGN KEY(id_producto) REFERENCES productos(id_producto))");
+            stmt.execute("CREATE TABLE IF NOT EXISTS usuarios (id_usuario INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, email TEXT NOT NULL UNIQUE, password TEXT NOT NULL, rol TEXT NOT NULL DEFAULT 'cliente')");
 
             try (var rs = stmt.executeQuery("SELECT COUNT(*) FROM mesas")) {
                 if (rs.next() && rs.getInt(1) == 0) {
@@ -48,6 +49,12 @@ public class ConexionDB {
             try (var rs = stmt.executeQuery("SELECT COUNT(*) FROM productos")) {
                 if (rs.next() && rs.getInt(1) == 0) {
                     stmt.execute("INSERT INTO productos (nombre, precio, categoria) VALUES ('Arroz con Pollo', 12.50, 'Platos Fuertes'), ('Lomo Saltado', 15.00, 'Platos Fuertes'), ('Ceviche', 13.50, 'Mariscos'), ('Jugo de Naranja', 4.00, 'Bebidas'), ('Torta de Chocolate', 6.50, 'Postres')");
+                }
+            }
+
+            try (var rs = stmt.executeQuery("SELECT COUNT(*) FROM usuarios")) {
+                if (rs.next() && rs.getInt(1) == 0) {
+                    stmt.execute("INSERT INTO usuarios (nombre, email, password, rol) VALUES ('Administrador', 'admin@restaurante.com', 'admin123', 'admin')");
                 }
             }
         }

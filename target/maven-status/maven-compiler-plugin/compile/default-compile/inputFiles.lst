@@ -1,6 +1,10 @@
+/workspaces/restaurante-j-j-r/src/main/java/com/restaurante/controller/AdminServlet.java
 /workspaces/restaurante-j-j-r/src/main/java/com/restaurante/controller/AdministracionServlet.java
+/workspaces/restaurante-j-j-r/src/main/java/com/restaurante/controller/ClienteServlet.java
 /workspaces/restaurante-j-j-r/src/main/java/com/restaurante/controller/CocinaServlet.java
+/workspaces/restaurante-j-j-r/src/main/java/com/restaurante/controller/LoginServlet.java
 /workspaces/restaurante-j-j-r/src/main/java/com/restaurante/controller/MeseroServlet.java
 /workspaces/restaurante-j-j-r/src/main/java/com/restaurante/model/Pedido.java
 /workspaces/restaurante-j-j-r/src/main/java/com/restaurante/model/Producto.java
+/workspaces/restaurante-j-j-r/src/main/java/com/restaurante/model/Usuario.java
 /workspaces/restaurante-j-j-r/src/main/java/com/restaurante/util/ConexionDB.java
