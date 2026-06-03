@@ -13,7 +13,7 @@ public class ConexionDB {
 
     // URL de conexión a MySQL.
     // En Railway se inyecta automáticamente mediante variables de entorno.
-    private static final String URL_DEFAULT = "jdbc:mysql://localhost:3306/restaurante_db?useSSL=false&serverTimezone=UTC";
+    private static final String URL_DEFAULT = "jdbc:mysql://localhost:3306/restaurante_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 
     // Credenciales del usuario de base de datos.
     // En un entorno real, estas credenciales deben configurarse con seguridad.

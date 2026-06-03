@@ -40,7 +40,7 @@ Pasos:
 2. Crea un servicio en Railway y elige "Deploy from GitHub".
 3. Añade una base de datos MySQL en Railway.
 4. En Variables, configura:
-   - DB_URL = jdbc:mysql://<host>:3306/restaurante_db?useSSL=false&serverTimezone=UTC
+   - DB_URL = jdbc:mysql://<host>:3306/restaurante_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
    - DB_USER = <usuario_mysql>
    - DB_PASSWORD = <contraseña_mysql>
 5. Railway construirá el contenedor con el Dockerfile y expondrá la app en el puerto 8080.
