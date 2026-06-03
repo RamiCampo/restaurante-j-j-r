@@ -1,0 +1,41 @@
+:root {
+  --primario: #1f6feb;
+  --oscuro: #17324d;
+  --fondo: #f4f7fb;
+  --blanco: #ffffff;
+  --verde: #1f9d68;
+  --rojo: #c0392b;
+  --gris: #6b7a90;
+}
+
+* { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+body { margin: 0; background: linear-gradient(180deg, #eef5ff 0%, var(--fondo) 100%); color: var(--oscuro); }
+.container { width: 92%; max-width: 1100px; margin: 0 auto; }
+.hero { background: linear-gradient(135deg, #17324d, #1f6feb); color: var(--blanco); padding: 40px 0 60px; }
+.hero.small { padding-bottom: 30px; }
+.hero h1 { font-size: 2.1rem; margin-bottom: 8px; }
+.hero p { color: #e6efff; }
+.menu-principal { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.menu-principal a, .boton { text-decoration: none; color: var(--blanco); background: #0e3a78; padding: 10px 14px; border-radius: 8px; display: inline-block; }
+.boton-principal { background: var(--primario); border: none; cursor: pointer; font-size: 1rem; }
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: -25px; }
+.tarjeta, .card { background: var(--blanco); border-radius: 16px; padding: 18px; box-shadow: 0 10px 25px rgba(23, 50, 77, 0.08); }
+.panel { padding: 24px 0 48px; }
+.form-grid { display: grid; gap: 16px; }
+.productos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.producto-card { border: 1px solid #dbe4f0; border-radius: 12px; padding: 12px; display: grid; gap: 8px; background: #f9fbff; }
+.producto-card input[type="number"] { width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #cdd8e8; }
+.precio { color: var(--primario); font-weight: bold; }
+.categoria { color: var(--gris); font-size: 0.92rem; }
+.alert { padding: 10px 12px; border-radius: 8px; font-weight: bold; }
+.alert.success { background: #e8fff7; color: #126544; border: 1px solid #b6ead0; }
+.alert.error { background: #fff1ef; color: #8d2d22; border: 1px solid #f0c4b8; }
+.lista-pedidos { display: grid; gap: 14px; }
+.pedido-card { border: 1px solid #dbe4f0; border-radius: 14px; padding: 14px; background: #fff; }
+.pedido-card ul { margin: 8px 0 0 18px; color: var(--gris); }
+.tabla { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 10px; }
+.tabla th, .tabla td { border-bottom: 1px solid #e4ebf5; padding: 10px; text-align: left; }
+.tabla th { background: #eff5ff; }
+.resumen-ganancias { background: linear-gradient(135deg, #1f9d68, #13b67a); color: #fff; }
+.resumen-ganancias .monto { font-size: 2rem; font-weight: bold; }
+@media (max-width: 720px) { .hero h1 { font-size: 1.6rem; } .menu-principal { flex-direction: column; } }
