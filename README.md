@@ -1,6 +1,6 @@
 # Sistema de Restaurante MVC con Java + JSP + MySQL
 
-Este proyecto está diseñado como ejemplo académico para un sistema web de restaurante con arquitectura MVC.
+Este proyecto está diseñado como ejemplo académico para un sistema web de restaurante con arquitectura MVC usando SQLite como base de datos local.
 
 ## Estructura del proyecto
 
@@ -26,10 +26,11 @@ sql/
 
 ## Cómo ejecutar
 
-1. Crear la base de datos MySQL con el script en sql/restaurante_db.sql.
-2. Ajustar las credenciales de usuario y contraseña en src/main/java/com/restaurante/util/ConexionDB.java o usar variables de entorno DB_URL / DB_USER / DB_PASSWORD.
-3. Desplegar el proyecto en un servidor Tomcat o similar.
-4. Ingresar a la URL base y navegar por los módulos de mesero, cocina y administración.
+1. Ejecutar el script en sql/restaurante_db.sql si quieres crear la base de datos manualmente.
+2. El proyecto ya usa SQLite por defecto con el archivo restaurante.db en la carpeta raíz del servidor.
+3. Si deseas cambiar la ubicación, define la variable DB_URL (por ejemplo: jdbc:sqlite:/ruta/a/restaurante.db).
+4. Desplegar el proyecto en un servidor Tomcat o similar.
+5. Ingresar a la URL base y navegar por los módulos de mesero, cocina y administración.
 
 ## Despliegue en Railway
 

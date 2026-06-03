@@ -1,34 +1,32 @@
 -- =========================================================
--- BASE DE DATOS DEL SISTEMA DE RESTAURANTE
+-- BASE DE DATOS SQLITE DEL SISTEMA DE RESTAURANTE
 -- =========================================================
--- Este script crea la base de datos y las tablas necesarias
--- para operar el sistema de pedidos, cocina y administración.
+-- Este script crea las tablas necesarias para el proyecto.
 -- =========================================================
 
-CREATE DATABASE IF NOT EXISTS restaurante_db;
-USE restaurante_db;
+PRAGMA foreign_keys = ON;
 
 -- ---------------------------------------------------------
 -- Tabla: mesas
 -- ---------------------------------------------------------
 -- Guarda el número de mesa disponible en el restaurante.
 CREATE TABLE IF NOT EXISTS mesas (
-    id_mesa INT AUTO_INCREMENT PRIMARY KEY,
-    numero_mesa INT NOT NULL UNIQUE,
-    capacidad INT NOT NULL DEFAULT 4,
-    estado VARCHAR(20) NOT NULL DEFAULT 'Disponible'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    id_mesa INTEGER PRIMARY KEY AUTOINCREMENT,
+    numero_mesa INTEGER NOT NULL UNIQUE,
+    capacidad INTEGER NOT NULL DEFAULT 4,
+    estado TEXT NOT NULL DEFAULT 'Disponible'
+);
 
 -- ---------------------------------------------------------
 -- Tabla: productos
 -- ---------------------------------------------------------
 -- Contiene el menú del restaurante con nombre, precio y categoría.
 CREATE TABLE IF NOT EXISTS productos (
-    id_producto INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    precio DECIMAL(10,2) NOT NULL,
-    categoria VARCHAR(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    id_producto INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    precio REAL NOT NULL,
+    categoria TEXT NOT NULL
+);
 
 -- ---------------------------------------------------------
 -- Tabla: pedidos
@@ -36,36 +34,27 @@ CREATE TABLE IF NOT EXISTS productos (
 -- Guarda cada orden enviada por el mesero.
 -- Estado puede ser: Pendiente / Listo.
 CREATE TABLE IF NOT EXISTS pedidos (
-    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
-    id_mesa INT NOT NULL,
-    fecha DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    total DECIMAL(10,2) NOT NULL DEFAULT 0.00,
-    estado VARCHAR(20) NOT NULL DEFAULT 'Pendiente',
-    CONSTRAINT fk_pedidos_mesa
-        FOREIGN KEY (id_mesa) REFERENCES mesas(id_mesa)
-        ON UPDATE CASCADE
-        ON DELETE RESTRICT
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    id_pedido INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_mesa INTEGER NOT NULL,
+    fecha TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    total REAL NOT NULL DEFAULT 0.0,
+    estado TEXT NOT NULL DEFAULT 'Pendiente',
+    FOREIGN KEY (id_mesa) REFERENCES mesas(id_mesa)
+);
 
 -- ---------------------------------------------------------
 -- Tabla: detalles_pedido
 -- ---------------------------------------------------------
 -- Registra los productos incluidos en cada pedido.
 CREATE TABLE IF NOT EXISTS detalles_pedido (
-    id_detalle INT AUTO_INCREMENT PRIMARY KEY,
-    id_pedido INT NOT NULL,
-    id_producto INT NOT NULL,
-    cantidad INT NOT NULL DEFAULT 1,
-    subtotal DECIMAL(10,2) NOT NULL DEFAULT 0.00,
-    CONSTRAINT fk_detalles_pedido_pedido
-        FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido)
-        ON UPDATE CASCADE
-        ON DELETE CASCADE,
-    CONSTRAINT fk_detalles_pedido_producto
-        FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
-        ON UPDATE CASCADE
-        ON DELETE RESTRICT
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    id_detalle INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_pedido INTEGER NOT NULL,
+    id_producto INTEGER NOT NULL,
+    cantidad INTEGER NOT NULL DEFAULT 1,
+    subtotal REAL NOT NULL DEFAULT 0.0,
+    FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido) ON DELETE CASCADE,
+    FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
+);
 
 -- ---------------------------------------------------------
 -- Datos iniciales: mesas
