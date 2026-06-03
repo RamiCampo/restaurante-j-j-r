@@ -22,29 +22,21 @@
 
         <div class="container hero-grid">
             <section class="hero-copy">
-                <p class="lead">Descubre el menú del restaurante, prueba la experiencia de cliente y entra al acceso por roles para administrar cocina, meseros, entregas y ventas.</p>
+                <p class="lead">Un menú visual, una vista rápida para el cliente y acceso por roles para atender el restaurante con estilo.</p>
                 <div class="category-pills">
                     <span>🍤 Mariscos</span>
-                    <span>🍝 Pastas</span>
-                    <span>🥗 Saludables</span>
-                    <span>🍰 Postres</span>
+                    <span>🍝 Platos fuertes</span>
                     <span>🥤 Bebidas</span>
+                    <span>🍰 Postres</span>
                 </div>
-                <nav class="menu-principal">
-                    <a href="${pageContext.request.contextPath}/cliente">Cliente</a>
-                    <a href="${pageContext.request.contextPath}/mesero">Mesero</a>
-                    <a href="${pageContext.request.contextPath}/cocina">Cocina</a>
-                    <a href="${pageContext.request.contextPath}/administracion">Admin</a>
-                    <a href="${pageContext.request.contextPath}/login">Acceso</a>
-                </nav>
             </section>
             <aside class="login-card">
-                <h2>Experiencia cliente</h2>
-                <p>La vista principal ahora destaca la experiencia del cliente: menú visual, pedidos y reseñas con un diseño más apetitoso.</p>
+                <h2>Acceso rápido</h2>
+                <p>Explora el menú, entra al sistema por rol y gestiona la experiencia del restaurante desde una sola vista.</p>
                 <ul>
-                    <li>Menú visual con categorías</li>
-                    <li>Panel de administración</li>
-                    <li>Gestión de cocina, meseros y domicilios</li>
+                    <li>Inicio de sesión por rol</li>
+                    <li>Vista de cliente y módulos operativos</li>
+                    <li>Diseño moderno y fácil de usar</li>
                 </ul>
                 <a class="boton boton-principal" href="${pageContext.request.contextPath}/login">Entrar al sistema</a>
             </aside>
@@ -57,26 +49,33 @@
                 <p class="eyebrow eyebrow-dark">Categorías</p>
                 <h2>Explora el menú por tipo de comida</h2>
             </div>
-            <p class="muted">Cada categoría se presenta con un estilo visual diferente para que la experiencia se sienta más real y atractiva.</p>
+            <p class="muted">Selecciona una categoría y dirígete directamente a sus opciones visuales.</p>
+        </section>
+
+        <section class="category-actions">
+            <a class="chip chip-primary" href="#platos-fuertes">🍝 Platos fuertes</a>
+            <a class="chip chip-primary" href="#mariscos">🍤 Mariscos</a>
+            <a class="chip chip-primary" href="#bebidas">🥤 Bebidas</a>
+            <a class="chip chip-primary" href="#postres">🍰 Postres</a>
         </section>
 
         <section class="feature-grid">
-            <article class="feature-card feature-rose">
+            <article id="platos-fuertes" class="feature-card feature-rose">
                 <span>🍽️</span>
                 <h3>Platos fuertes</h3>
                 <p>Arroz con pollo, lomo saltado y opciones de cocina tradicional.</p>
             </article>
-            <article class="feature-card feature-gold">
+            <article id="mariscos" class="feature-card feature-gold">
                 <span>🦐</span>
                 <h3>Mariscos</h3>
                 <p>Ceviches, entradas y sabores frescos para una carta más atractiva.</p>
             </article>
-            <article class="feature-card feature-emerald">
+            <article id="bebidas" class="feature-card feature-emerald">
                 <span>🥤</span>
                 <h3>Bebidas</h3>
                 <p>Jugo, refrescos y opciones rápidas para acompañar cualquier pedido.</p>
             </article>
-            <article class="feature-card feature-sky">
+            <article id="postres" class="feature-card feature-sky">
                 <span>🍰</span>
                 <h3>Postres</h3>
                 <p>Opciones dulces con presentación moderna para cerrar la experiencia.</p>
@@ -95,19 +94,25 @@
                 <span class="badge">Mesero</span>
                 <h2>Tomar pedidos</h2>
                 <p>Selecciona mesa, agrega productos y envía la orden directamente a cocina.</p>
-                <a class="boton" href="${pageContext.request.contextPath}/mesero">Ingresar</a>
+                <a class="boton" href="${pageContext.request.contextPath}/mesero-panel">Ingresar</a>
             </article>
             <article class="tarjeta tarjeta-gold">
                 <span class="badge">Cocina</span>
                 <h2>Preparar órdenes</h2>
                 <p>Revisa los pedidos pendientes y marca cada uno como listo al terminar.</p>
-                <a class="boton" href="${pageContext.request.contextPath}/cocina">Ingresar</a>
+                <a class="boton" href="${pageContext.request.contextPath}/cocinero">Ingresar</a>
             </article>
             <article class="tarjeta tarjeta-emerald">
                 <span class="badge">Administración</span>
                 <h2>Control de ventas</h2>
                 <p>Consulta el historial de pedidos y visualiza el total acumulado de ganancias.</p>
-                <a class="boton" href="${pageContext.request.contextPath}/administracion">Ingresar</a>
+                <a class="boton" href="${pageContext.request.contextPath}/admin">Ingresar</a>
+            </article>
+            <article class="tarjeta tarjeta-sky">
+                <span class="badge">Cajero</span>
+                <h2>Pagos y despachos</h2>
+                <p>Controla pagos, revisiones y estados de entrega para cerrar cada pedido con claridad.</p>
+                <a class="boton" href="${pageContext.request.contextPath}/cajero">Ingresar</a>
             </article>
         </section>
     </main>

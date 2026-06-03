@@ -22,6 +22,12 @@
     </header>
 
     <main class="container panel">
+        <% if (request.getAttribute("mensajeError") != null) { %>
+            <div class="alert error"><%= request.getAttribute("mensajeError") %></div>
+        <% } %>
+        <% if (request.getAttribute("mensajeExito") != null) { %>
+            <div class="alert success"><%= request.getAttribute("mensajeExito") %></div>
+        <% } %>
         <section class="section-heading">
             <div>
                 <p class="eyebrow eyebrow-dark">Roles</p>
